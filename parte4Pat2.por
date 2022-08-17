@@ -28,7 +28,7 @@ programa
 						inicio()}
 							escolha(menuBolo){
 								caso 1: 																			
-								escreva("========================================\nBrownie.\nDescrição do produto: È um bolinho compacto de chocolate. Com a crosta crocante e a massa macia e untuosa.\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00")
+								escreva("========================================\nBrownie.\nDescrição do produto: È um bolinho compacto\nde chocolate. Com a crosta crocante e a\nmassa macia e untuosa.\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Brownie")
@@ -45,7 +45,7 @@ programa
 											    leia(menuBolo)}
 											    inicio()
 								caso 2: 
-								escreva("=========================================\nBolo de Cenoura.\nDescrição do produto: È um bolo doce com raspagem de cenoura misturada dentro da massa.\nQuantidade em estoque: ",estoquebolocenoura,"\nPreço: R$ 4,50")
+								escreva("=========================================\nBolo de Cenoura.\nDescrição do produto: È um bolo doce com\nraspagem de cenoura misturada dentro da massa.\nQuantidade em estoque: ",estoquebolocenoura,"\nPreço: R$ 4,50")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Bolo de Cenoura")
@@ -62,7 +62,7 @@ programa
 									   		   leia(menuBolo)}
 											   inicio()
 								caso 3: 
-								escreva("=========================================\nBolo Gelado.\nDescrição do produto: Ele cai bem como sobremesa, na hora do lanche e também em festas.\nQuantidade em estoque: ",estoquebologelado,"\nPreço: R$ 6,00")
+								escreva("=========================================\nBolo Gelado.\nDescrição do produto: Ele cai bem como\nsobremesa, na hora do lanche e também\nem festas.\nQuantidade em estoque: ",estoquebologelado,"\nPreço: R$ 6,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Bolo Gelado")
@@ -104,7 +104,7 @@ programa
 						inicio()}
 							escolha(menuBebida){
 								caso 1: 
-								escreva("=========================================\nChocolate Quente.\nDescrição do produto: É uma bebida quente e doce feita com chocolate com leite.\nQuantidade em estoque: 14\nPreço: R$ 7,00")
+								escreva("=========================================\nChocolate Quente.\nDescrição do produto: É uma bebida quente\ne doce feita com chocolate com leite.\nQuantidade em estoque: 14\nPreço: R$ 7,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Chocolate Quente")
@@ -121,7 +121,7 @@ programa
 											   leia(menuBebida)}
 											   inicio()
 								caso 2: 
-								escreva("=========================================\nSuco.\nDescrição do produto: Batido na hora, com frutas frescas.\nQuantidade em estoque: 29\nPreço: R$ 4,50")
+								escreva("=========================================\nSuco.\nDescrição do produto: Batido na hora,\ncom frutas frescas.\nQuantidade em estoque: 29\nPreço: R$ 4,50")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Suco")
@@ -138,7 +138,7 @@ programa
 									        	   leia(menuBebida)}
 											   inicio()
 								caso 3: 
-								escreva("=========================================\nCafé Expresso.\nDescrição do produto: Uma definição mais qualitativa do café expresso, é que tem maior consistência que o café coado.\nQuantidade em estoque: 14\nPreço: R$ 5,50")
+								escreva("=========================================\nCafé Expresso.\nDescrição do produto: Uma definição mais\nqualitativa do café expresso, é que tem maior\nconsistência que o café coado.\nQuantidade em estoque: 14\nPreço: R$ 5,50")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Café Expresso")
@@ -180,7 +180,7 @@ programa
 						inicio()}
 						escolha(menuDoce){
 								caso 1: 																			
-								escreva("=========================================\nPudim.\nDescrição do produto: Feito com leite moça e coco ralado no fundo\nQuantidade em estoque: 9\nPreço: R$ 3,00")
+								escreva("=========================================\nPudim.\nDescrição do produto: Feito com leite moça\ne coco ralado no fundo\nQuantidade em estoque: 9\nPreço: R$ 3,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Pudim")
@@ -197,7 +197,7 @@ programa
 												   leia(menuDoce)}
 												   inicio()
 								caso 2: 
-								escreva("=========================================\nTorta Alemã.\nDescrição do produto:  Feita com um leve creme espesso e frio a base de gemas, açúcar, manteiga, creme de leite e essência de baunilha\nQuantidade em estoque: 17\nPreço: R$ 4,00")
+								escreva("=========================================\nTorta Alemã.\nDescrição do produto: Feita com um leve \ncreme espesso e frio a base de gemas,\naçúcar, manteiga, creme de leite e essência\nde baunilha\nQuantidade em estoque: 17\nPreço: R$ 4,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Torta Alemã")
@@ -214,7 +214,7 @@ programa
 									        	   leia(menuDoce)}
 											   inicio()
 								caso 3: 
-								escreva("=========================================\nPalha Italiana.\nDescrição do produto: Feito à base de brigadeiro e biscoito triturado moldados em tabletes\nQuantidade em estoque: 32\nPreço: 3,50")
+								escreva("=========================================\nPalha Italiana.\nDescrição do produto: Feito à base de\nbrigadeiro e biscoito triturado moldados\nem tabletes\nQuantidade em estoque: 32\nPreço: 3,50")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Palha Italiana")
@@ -253,7 +253,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2008; 
+ * @POSICAO-CURSOR = 12336; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -1,3 +1,4 @@
+//abuble
 programa
 {
     inclua biblioteca Util --> u
@@ -95,9 +96,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1769; 
+ * @POSICAO-CURSOR = 8; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {usuario, 12, 31, 7}-{senha, 12, 46, 5}-{usuarioSenha, 14, 15, 12}-{usuarioExiste, 23, 16, 13}-{i, 25, 22, 1}-{usuario, 53, 15, 7}-{senha, 53, 23, 5};
+ * @SIMBOLOS-INSPECIONADOS = {usuario, 12, 31, 7}-{senha, 12, 46, 5}-{usuarioSenha, 14, 15, 12}-{usuarioExiste, 23, 16, 13}-{i, 25, 22, 1}-{usuario, 12, 31, 7}-{senha, 12, 46, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */

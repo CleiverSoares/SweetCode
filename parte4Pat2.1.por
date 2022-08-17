@@ -138,7 +138,7 @@ programa
 									        	   leia(menuBebida)}
 											   inicio()
 								caso 3: 
-								escreva("=========================================\nCafé Expresso.\nDescrição do produto: Uma definição mais\nqualitativa do café expresso, é que tem maior\nconsistência que o café coado.\nQuantidade em estoque: 14\nPreço: R$ 5,50")
+								escreva("=========================================\nCafé Expresso.\nDescrição do produto: Uma definição mais\nqualitativa do café expresso, é que tem\nmaior consistência que o café coado.\nQuantidade em estoque: 14\nPreço: R$ 5,50")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Café Expresso")
@@ -149,7 +149,7 @@ programa
 									leia(menuBebida)}
 										se(menuBebida==0){
 										inicio()}
-										enquanto(menuBebida!=0){
+										enquanto(menuBebida!=0){ 
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
 											   leia(menuBebida)}
@@ -253,7 +253,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 12336; 
+ * @POSICAO-CURSOR = 8643; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

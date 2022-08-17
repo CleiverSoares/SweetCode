@@ -1,8 +1,8 @@
 programa
 {
 	
-	funcao inicio(){
-		inteiro i=0
+	funcao inicio(){
+		inteiro i=0
 		caracter l='_', s='&'
 		
 		//linha 01
@@ -219,14 +219,14 @@ programa
 			escreva(l)
 		}i=0
 		escreva("\n")
-	}
+	}// teste
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3920; 
+ * @POSICAO-CURSOR = 3928; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

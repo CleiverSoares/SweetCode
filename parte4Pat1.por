@@ -28,7 +28,7 @@ programa
 						inicio()}
 							escolha(menuBolo){
 								caso 1: 																			
-								escreva("========================================\nBrownie.\nDescrição do produto: é um bolinho compacto de chocolate. Com a crosta crocante e a massa macia e untuosa.\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00")
+								escreva("========================================\nBrownie.\nDescrição do produto: È um bolinho compacto de chocolate. Com a crosta crocante e a massa macia e untuosa.\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Brownie")
@@ -253,7 +253,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 12372; 
+ * @POSICAO-CURSOR = 2008; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -6,6 +6,6 @@ A Sweet Code surgiu como trabalho em grupo do programa Serratec. O objetivo dest
 ### Desenvolvedores:
 Alessandra Pinheiro - https://www.linkedin.com/in/alessandra-pinheiro-30b085178/
 <br/>Cleiver Soares - https://www.linkedin.com/in/cleiver-soares-b81526169/
-<br/>Luís Pedro Chaves - 
+<br/>Luís Pedro Chaves - https://www.linkedin.com/in/lu%C3%ADs-pedro-medeiros-chaves-16585586/
 <br/>Marcelle Machado - https://www.linkedin.com/in/marcellermachado/
 <br/>Pedro Rohem - http://www.linkedin.com/in/pprohem

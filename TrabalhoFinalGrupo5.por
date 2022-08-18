@@ -15,10 +15,8 @@ programa
 		//logoLoja()
 		//entrarLoja()
 		//fazerLogin()
-		//u.aguarde(2000)
-		//limpa()
-		//loja()
-		fim()
+		loja()
+		//fim()
 	}
 
 	funcao logoLoja(){
@@ -389,11 +387,11 @@ programa
 	funcao logico login(cadeia usuario,cadeia senha){
 		cadeia usuarioSenha[5][2]= 
 		{
-			{"cleiver","cleiver123"},
-			{"pedro","pedro321"},
-			{"luis","luis546"},
-			{"marcelle","marcelle654"},
-			{"alessandra","alessandra789"}
+			{"Cleiver","cleiver123"},
+			{"Pedro","pedro321"},
+			{"Luis","luis546"},
+			{"Marcelle","marcelle654"},
+			{"Alessandra","alessandra789"}
 	 	}
 
 	 	logico usuarioExiste=falso
@@ -431,7 +429,9 @@ programa
 
 		se(fezLogin){
           	usuarioGlobal = usuario
-			escreva("Login bem sucedido! Por favor, aguarde")
+			escreva("\nLogin bem sucedido! Por favor, aguarde")
+			u.aguarde(1000)
+			loja()
 		}senao{
             para(contador; contador>0; contador--){
             	escreva("Você tem mais ", contador, " tentativa(s).")
@@ -462,12 +462,12 @@ programa
 		limpa()
 		escreva("Olá, ",usuarioGlobal, " seja bem-vindo a ",nomeLoja,"!")
 		escreva("\n\nEscolha uma das categorias disponíveis para conhecer nossos produtos:\n ==================================\n")
-		escreva("    1) Para Bolos\n    2) Para bebidas\n    3) Para doces\n    4) Para sair da loja\n ==================================\n")
+		escreva("    1) Para Bolos\n    2) Para bebidas\n    3) Para doces\n    0) Para sair da loja\n ==================================\n")
 			escreva("\nDigite o número da categoria que deseja acessar: ")
 			leia(categoria)
 			se(t.cadeia_e_inteiro(categoria, 10))
 				categoriaInt = t.cadeia_para_inteiro(categoria, 10)
-				se(categoriaInt!=1 e categoriaInt!=2 e categoriaInt!=3 e categoriaInt!=4){
+				se(categoriaInt!=1 e categoriaInt!=2 e categoriaInt!=3 e categoriaInt!=0){
 					escreva("O número digitado não corresponde a nenhuma categoria.\n")
 					i=falso
 			}
@@ -484,7 +484,7 @@ programa
 				caso 3: {
 					categoria3()
 				pare }
-				caso 4: {
+				caso 0: {
 					limpa()
 					escreva("\n\n\n")
 					fim()
@@ -513,7 +513,7 @@ programa
 							escolha(menuBolo){
 								caso 1:
 								limpa()																			
-								escreva("\n===========================================\n                - Brownie -\n===========================================\n")
+								escreva("\n===========================================\n               - Brownie -\n===========================================\n")
 								escreva("Descrição do produto: É um bolinho compacto\nde chocolate. Com a crosta crocante e a\nmassa macia e untuosa.\n\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
@@ -521,10 +521,10 @@ programa
 									enquanto(menuBolo == 1){
 									g.desenhar_imagem(0,0, foto2)
 									g.renderizar()
-									escreva("\n\nDigite 0 para retornar ao menu principal: ")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBolo)}
 										se(menuBolo==0){
-										loja()}
+										categoria1()}
 										enquanto(menuBolo!=0){
 											    limpa()
 											    escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0) Para retornar ao menu principal.\n")
@@ -540,27 +540,29 @@ programa
 									enquanto(menuBolo == 2){
 									g.desenhar_imagem(0,0, foto)
 									g.renderizar()
-									escreva("\n\nDigite 0 para retornar ao menu principal: ")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBolo)}
 										se(menuBolo==0){
-										loja()}
+										categoria1()}
 										enquanto(menuBolo!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0) Para retornar ao menu principal.\n")
 									   		   leia(menuBolo)}
 											   loja()
-								caso 3: 
-								escreva("=========================================\nBolo Gelado.\nDescrição do produto: Ele cai bem como\nsobremesa, na hora do lanche e também\nem festas.\nQuantidade em estoque: ",estoquebologelado,"\nPreço: R$ 6,00")
+								caso 3:
+								limpa()
+								escreva("\n===========================================\n             - Bolo Gelado -\n===========================================\n")
+								escreva("Descrição do produto: Ele cai bem como\nsobremesa, na hora do lanche e também\nem festas.\n\nQuantidade em estoque: ",estoquebologelado,"\nPreço: R$ 6,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Bolo Gelado")
 									enquanto(menuBolo == 3){
 									g.desenhar_imagem(0,0, foto3)
 									g.renderizar()
-									escreva("\nDigite:0) Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBolo)}
 										se(menuBolo==0){
-										loja()}
+										categoria1()}
 										enquanto(menuBolo!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0) Para retornar ao menu principal.\n")
@@ -578,8 +580,9 @@ programa
 									loja()
 	}
 
-	funcao categoria2() {																															
-					escreva("Menu de Bebidas.\n=============================\nChocolate Quente_______R$7,00.\nSuco___________________R$4.50.\nCafé Expresso__________R$5,50.\n")
+	funcao categoria2() {	
+					limpa()																														
+					escreva("Menu de Bebidas\n==================================\nChocolate Quente_______R$7,00\nSuco___________________R$4.50\nCafé Expresso__________R$5,50\n\n")
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(750, 180)
 					g.definir_titulo_janela("Bebidas")
@@ -588,57 +591,64 @@ programa
 						g.desenhar_imagem(250,0, foto5)
 						g.desenhar_imagem(00,0, foto6)
 						g.renderizar()																
-						escreva("\nDeseja selecionar uma opção?\nDigite:\n\n1.Para Chocolate Quente.\n==================================\n2.Para Suco.\n==================================\n3.Para Café Expresso.\n==================================\n0.Para retornar ao menu principal.\n==================================\n")
+						escreva("\n\nEscolha o número correspondente para mais detalhes do produto:\n===================================\n1) Para Chocolate Quente\n2) Para Suco\n3) Para Café Expresso\n0) Para retornar ao menu principal\n===================================\n")
+						escreva("Digite a categoria desejada: ")
 						leia(menuBebida)
 						se(menuBebida==0){
 						loja()}
 							escolha(menuBebida){
-								caso 1: 
-								escreva("=========================================\nChocolate Quente.\nDescrição do produto: É uma bebida quente\ne doce feita com chocolate com leite.\nQuantidade em estoque: 14\nPreço: R$ 7,00")
+								caso 1:
+								limpa()
+								escreva("\n===========================================\n           - Chocolate Quente -\n===========================================\n")
+								escreva("Descrição do produto: É uma bebida quente\ne doce feita com chocolate e leite.\n\nQuantidade em estoque: 14\nPreço: R$ 7,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Chocolate Quente")
 									enquanto(menuBebida == 1){
 									g.desenhar_imagem(0,0, foto6)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBebida)}
 										se(menuBebida==0){
-										loja()}
+										categoria2()}
 										enquanto(menuBebida!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
 											   leia(menuBebida)}
 											   loja()
-								caso 2: 
-								escreva("=========================================\nSuco.\nDescrição do produto: Batido na hora,\ncom frutas frescas.\nQuantidade em estoque: 29\nPreço: R$ 4,50")
+								caso 2:
+								limpa()
+								escreva("\n===========================================\n               - Suco -\n===========================================\n")
+								escreva("Descrição do produto: Batido na hora,\ncom frutas frescas.\n\nQuantidade em estoque: 29\nPreço: R$ 4,50\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Suco")
 									enquanto(menuBebida == 2){
 									g.desenhar_imagem(0,0, foto5)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBebida)}
 										se(menuBebida==0){
-										loja()}
+										categoria2()}
 										enquanto(menuBebida!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
 									        	   leia(menuBebida)}
 											   loja()
-								caso 3: 
-								escreva("=========================================\nCafé Expresso.\nDescrição do produto: Uma definição mais\nqualitativa do café expresso, é que tem\nmaior consistência que o café coado.\nQuantidade em estoque: 14\nPreço: R$ 5,50")
+								caso 3:
+								limpa()
+								escreva("\n===========================================\n            - Café Expresso -\n===========================================\n")
+								escreva("Descrição do produto: Uma definição mais\nqualitativa do café expresso, é que tem\nmaior consistência que o café coado.\n\nQuantidade em estoque: 14\nPreço: R$ 5,50\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Café Expresso")
 									enquanto(menuBebida == 3){
 									g.desenhar_imagem(0,0, foto4)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar: ")
 									leia(menuBebida)}
 										se(menuBebida==0){
-										loja()}
+										categoria2()}
 										enquanto(menuBebida!=0){ 
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
@@ -657,7 +667,8 @@ programa
 	}
 
 	funcao categoria3() {
-					escreva("Menu de Doces.\n=================================\nPudim________________R$3,00(Fatia).\nTorta Alemã__________R$4.00(Fatia).\nPalha Italiana________R$3,50(Cada).\n")
+					limpa()
+					escreva("Menu de Doces\n==================================\nPudim________________R$3,00(Fatia)\nTorta Alemã__________R$4.00(Fatia)\nPalha Italiana________R$3,50(Cada)\n\n")
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(750, 180)
 					g.definir_titulo_janela("Doces")
@@ -666,57 +677,64 @@ programa
 						g.desenhar_imagem(250,0, foto8)
 						g.desenhar_imagem(500,0, foto9)
 						g.renderizar()																		
-						escreva("\nDeseja selecionar uma opção?\nDigite:\n\n1.Para Pudim.\n==================================\n2.Para Torta Alemã.\n==================================\n3.Para Palha Italiana.\n==================================\n0.Para retornar ao menu principal.\n==================================\n")
+						escreva("\n\nEscolha o número correspondente para mais detalhes do produto:\n===================================\n1) Para Pudim\n2) Para Torta Alemã\n3) Para Palha Italiana\n0) Para retornar ao menu principal\n===================================\n")
+						escreva("Digite a categoria desejada: ")
 						leia(menuDoce)
 						se(menuDoce==0){
 						loja()}
 							escolha(menuDoce){
-								caso 1: 																			
-								escreva("==========================================\nPudim.\nDescrição do produto: Feito com leite moça\ne coco ralado no fundo\nQuantidade em estoque: 9\nPreço: R$ 3,00")
+								caso 1:
+								limpa()																		
+								escreva("\n===========================================\n            - Pudim -\n===========================================\n")
+								escreva("Descrição do produto: Feito com leite moça\ne coco ralado no fundo\n\nQuantidade em estoque: 9\nPreço: R$ 3,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Pudim")
 									enquanto(menuDoce == 1){
 									g.desenhar_imagem(0,0, foto7)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n==========================================\n")
+									escreva("\n\nDigite 0 para retornar ao menu principal: ")
 									leia(menuDoce)}
 										se(menuDoce==0){
-										loja()}
+										categoria3()}
 											enquanto(menuDoce!=0){
 												   limpa()
 												   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
 												   leia(menuDoce)}
 												   loja()
-								caso 2: 
-								escreva("===========================================\nTorta Alemã.\nDescrição do produto: Feita com um leve \ncreme espesso e frio a base de gemas,\naçúcar, manteiga, creme de leite e essência\nde baunilha\nQuantidade em estoque: 17\nPreço: R$ 4,00")
+								caso 2:
+								limpa()
+								escreva("\n===========================================\n            - Torta Alemã -\n===========================================\n")
+								escreva("Descrição do produto: Feita com um leve \ncreme espesso e frio a base de gemas,\naçúcar, manteiga, creme de leite e essência\nde baunilha.\n\nQuantidade em estoque: 17\nPreço: R$ 4,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Torta Alemã")
 									enquanto(menuDoce == 2){
 									g.desenhar_imagem(0,0, foto8)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n===========================================\n")
+									escreva("\n\nDigite 0 para retornar ao menu principal: ")
 									leia(menuDoce)}
 										se(menuDoce==0){
-										loja()}
+										categoria3()}
 										enquanto(menuDoce!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
 									        	   leia(menuDoce)}
 											   loja()
-								caso 3: 
-								escreva("=========================================\nPalha Italiana.\nDescrição do produto: Feito à base de\nbrigadeiro e biscoito triturado moldados\nem tabletes\nQuantidade em estoque: 32\nPreço: 3,50")
+								caso 3:
+								limpa()
+								escreva("\n===========================================\n            - Palha Italiana -\n===========================================\n")
+								escreva("Descrição do produto: Feito à base de\nbrigadeiro e biscoito triturado moldados\nem tabletes\n\nQuantidade em estoque: 32\nPreço: 3,50\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Palha Italiana")
 									enquanto(menuDoce == 3){
 									g.desenhar_imagem(0,0, foto9)
 									g.renderizar()
-									escreva("\nDigite:0.Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar ao menu principal: ")
 									leia(menuDoce)}
 										se(menuDoce==0){
-										inicio()}
+										categoria3()}
 										enquanto(menuDoce!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0.Para retornar ao menu principal.\n")
@@ -793,8 +811,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 705; 
- * @DOBRAMENTO-CODIGO = [23, 344, 388, 421, 580, 658];
+ * @POSICAO-CURSOR = 7132; 
+ * @DOBRAMENTO-CODIGO = [21];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

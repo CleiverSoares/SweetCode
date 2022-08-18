@@ -6,7 +6,7 @@ programa
 	
 
 	cadeia usuarioGlobal, nomeLoja="Sweet Code"
-	inteiro contador=3, k=5, l=3
+	inteiro contador=3, k=5, m=3
 	
 	funcao inicio(){
 
@@ -440,12 +440,12 @@ programa
             para(j=k; j>0; j--){
             limpa()
             escreva("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            escreva("\n\n  Acesso bloqueado por ",j ," segundos devido ",l ," tentativas inválidas.\n\n")
+            escreva("\n\n  Acesso bloqueado por ",j ," segundos devido ",m ," tentativas inválidas.\n\n")
             escreva("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
             u.aguarde(1000)
             }contador=3
             k = k*2
-            l = l+3
+            m = m+3
             limpa()
             fazerLogin()
 		}
@@ -508,7 +508,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 212; 
+ * @POSICAO-CURSOR = 7749; 
+ * @DOBRAMENTO-CODIGO = [21, 342];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

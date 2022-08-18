@@ -11,9 +11,9 @@ programa
 
 	
 	funcao inicio(){
-		//logoLoja()
-		//entrarLoja()
-		loja()
+		logoLoja()
+		entrarLoja()
+		//loja()
 	}
 
 	funcao logoLoja(){
@@ -813,7 +813,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 14218; 
+ * @POSICAO-CURSOR = 737; 
  * @DOBRAMENTO-CODIGO = [18];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;

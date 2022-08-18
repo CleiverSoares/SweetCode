@@ -5,13 +5,9 @@ programa
 	inclua biblioteca Util --> u
 	
 
-	cadeia usuarioGlobal, nomeLoja="Sweet Code"
-	inteiro contador=3, k=5, m=3
-
 	inteiro foto =g.carregar_imagem("bolocenoura.jpeg"),foto2=g.carregar_imagem("brownie.jpg"),foto3=g.carregar_imagem("bologelado.jfif"),foto4=g.carregar_imagem("cafe.jfif"),foto5=g.carregar_imagem("suco.jpg"),foto6=g.carregar_imagem("chocolatequente.jfif"),foto7=g.carregar_imagem("pudim.jfif"),foto8=g.carregar_imagem("tortaalema.jfif"),foto9=g.carregar_imagem("palhaitaliana.jfif")
-	inteiro produtoa,estoquebolocenoura=10,estoquebrownie=20,estoquebologelado=7,menuBolo,menuBebida,menuDoce
-	cadeia usuarioGlobal, nomeLoja="Sweet Code"
-	inteiro  categoriaInt=0
+	inteiro produtoa,estoquebolocenoura=10,estoquebrownie=20,estoquebologelado=7,menuBolo,menuBebida,menuDoce, contador=3, k=5, m=3, categoriaInt=0
+	cadeia usuarioGlobal, nomeLoja="Sweet Code" 
 
 	
 	funcao inicio(){
@@ -462,14 +458,16 @@ programa
 		cadeia texto, categoria
 		logico i
 		
-	//	escreva("Olá, ",usuarioGlobal, " seja bem-vindo a ",nomeloja,"!")
-		escreva("Qual categoria você gostaria?\nDigite:\n====================\n1) Para Bolos.\n2) Para bebidas.\n3) Para doces.\n4) Para sair do menu.\n====================\n")
 		faca{
+		limpa()
+		escreva("Olá, ",usuarioGlobal, " seja bem-vindo a ",nomeLoja,"!")
+		escreva("\n\nEscolha uma das categorias disponíveis para conhecer nossos produtos:\n ==================================\n")
+		escreva("    1) Para Bolos\n    2) Para bebidas\n    3) Para doces\n    4) Para sair da loja\n ==================================\n")
 			escreva("\nDigite o número da categoria que deseja acessar: ")
 			leia(categoria)
-			se (t.cadeia_e_inteiro(categoria, 10))
+			se(t.cadeia_e_inteiro(categoria, 10))
 				categoriaInt = t.cadeia_para_inteiro(categoria, 10)
-				se(categoriaInt!=1 e categoriaInt!=2 e categoriaInt!=3){
+				se(categoriaInt!=1 e categoriaInt!=2 e categoriaInt!=3 e categoriaInt!=4){
 					escreva("O número digitado não corresponde a nenhuma categoria.\n")
 					i=falso
 			}
@@ -486,12 +484,19 @@ programa
 				caso 3: {
 					categoria3()
 				pare }
+				caso 4: {
+					limpa()
+					escreva("\n\n\n")
+					fim()
+				pare}
 			}
+		u.aguarde(1750)
 		} enquanto (i==falso)
 	}
 
 	funcao categoria1() {																														
-					escreva("Menu de Bolos.\n==================================\nBrownie________________R$5,00(Cada).\nBolo de Cenoura_______R$4.50(Fatia).\nBolo Gelado___________R$6.00(Fatia).\n")
+					limpa()
+					escreva("Menu de Bolos\n==================================\nBrownie________________R$5,00(Cada)\nBolo de Cenoura_______R$4.50(Fatia)\nBolo Gelado___________R$6.00(Fatia)\n\n")
 					g.iniciar_modo_grafico(verdadeiro)
 					g.definir_dimensoes_janela(750, 175)
 					g.definir_titulo_janela("Bolos")
@@ -500,20 +505,23 @@ programa
 						g.desenhar_imagem(0,0, foto2)
 						g.desenhar_imagem(500,0, foto3)
 						g.renderizar()															
-						escreva("\nDeseja selecionar uma opção?\nDigite:\n\n1) Para Brownie.\n===================================\n2) Para Bolo de Cenoura.\n===================================\n3) Para Bolo Gelado.\n===================================\n0) Para retornar ao menu principal.\n===================================\n")
+						escreva("\n\nEscolha o número correspondente para mais detalhes do produto:\n===================================\n1) Para Brownie\n2) Para Bolo de Cenoura\n3) Para Bolo Gelado\n0) Para retornar ao menu principal\n===================================\n")
+						escreva("Digite a categoria desejada: ")
 						leia(menuBolo)
 						se(menuBolo==0){
 						loja()}
 							escolha(menuBolo){
-								caso 1: 																			
-								escreva("===========================================\nBrownie.\nDescrição do produto: È um bolinho compacto\nde chocolate. Com a crosta crocante e a\nmassa macia e untuosa.\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00")
+								caso 1:
+								limpa()																			
+								escreva("\n===========================================\n                - Brownie -\n===========================================\n")
+								escreva("Descrição do produto: É um bolinho compacto\nde chocolate. Com a crosta crocante e a\nmassa macia e untuosa.\n\nQuantidade em estoque: ",estoquebrownie,"\nPreço: R$ 5,00\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Brownie")
 									enquanto(menuBolo == 1){
 									g.desenhar_imagem(0,0, foto2)
 									g.renderizar()
-									escreva("\nDigite:0) Para retornar ao menu principal.\n===========================================\n")
+									escreva("\n\nDigite 0 para retornar ao menu principal: ")
 									leia(menuBolo)}
 										se(menuBolo==0){
 										loja()}
@@ -522,18 +530,20 @@ programa
 											    escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0) Para retornar ao menu principal.\n")
 											    leia(menuBolo)}
 											    loja()
-								caso 2: 
-								escreva("=========================================\nBolo de Cenoura.\nDescrição do produto: È um bolo doce com\nraspagem de cenoura misturada dentro da\nmassa.\nQuantidade em estoque: ",estoquebolocenoura,"\nPreço: R$ 4,50")
+								caso 2:
+								limpa()
+								escreva("\n===========================================\n            - Bolo de Cenoura -\n===========================================\n")
+								escreva("Descrição do produto: É um bolo doce com\nraspagem de cenoura misturada dentro da\nmassa.\n\nQuantidade em estoque: ",estoquebolocenoura,"\nPreço: R$ 4,50\n===========================================\n")
 								g.iniciar_modo_grafico(verdadeiro)
 								g.definir_dimensoes_janela(250, 175)
 								g.definir_titulo_janela("Bolo de Cenoura")
 									enquanto(menuBolo == 2){
 									g.desenhar_imagem(0,0, foto)
 									g.renderizar()
-									escreva("\nDigite:0) Para retornar ao menu principal.\n=========================================\n")
+									escreva("\n\nDigite 0 para retornar ao menu principal: ")
 									leia(menuBolo)}
 										se(menuBolo==0){
-										inicio()}
+										loja()}
 										enquanto(menuBolo!=0){
 											   limpa()
 											   escreva("\nPor favor,digite apenas o número indicado:\n=========================================\n0) Para retornar ao menu principal.\n")
@@ -746,8 +756,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 8868; 
- * @DOBRAMENTO-CODIGO = [27, 348, 392, 425, 492, 570, 648, 736, 735];
+ * @POSICAO-CURSOR = 9921; 
+ * @DOBRAMENTO-CODIGO = [23, 344, 388, 421, 580, 658, 746, 745];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

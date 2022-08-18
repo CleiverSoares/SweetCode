@@ -12,13 +12,13 @@ programa
 	
 	funcao inicio(){
 
-		//ok
 		//logoLoja()
 		//entrarLoja()
 		//fazerLogin()
 		//u.aguarde(2000)
 		//limpa()
-		loja()
+		//loja()
+		fim()
 	}
 
 	funcao logoLoja(){
@@ -744,9 +744,46 @@ programa
 
 
 	funcao fim(){
+		caracter l=' ', s='&'
+		
+		limpa()
+		escreva("\n\n\n")
 		para(inteiro i=0; i<=55; i++){
-			escreva(" ")
-		}escreva("\nMuito obrigado pela visite, volte sempre!\n")
+			escreva(l)
+		}escreva("Muito obrigado pela visite, volte sempre!\n\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,s,s,s,s,s,s,s,l,l,l,l,l,l,s,s,s,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,s,s,s,s,s,s,s,s,s,s,s,l,l,s,s,s,s,s,s,s,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(s,s,s,s,l,l,l,l,l,l,s,s,s,s,s,s,l,l,l,l,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(s,s,s,s,l,l,l,l,l,l,l,l,s,s,l,l,l,l,l,l,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,s,s,s,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,s,s,s,s,l,l,l,l,l,l,l,l,l,l,l,l,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,l,s,s,s,s,l,l,l,l,l,l,l,l,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,l,l,l,s,s,s,s,l,l,l,l,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,l,l,l,l,l,s,s,s,s,l,l,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,l,l,l,l,l,l,l,s,s,s,s,s,s,"\n")
+		para(inteiro i=0; i<=61; i++){
+			escreva(l)
+		}escreva(l,l,l,l,l,l,l,l,l,l,l,l,s,s,"\n\n\n\n\n")
 	}
 }
 
@@ -756,8 +793,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9921; 
- * @DOBRAMENTO-CODIGO = [23, 344, 388, 421, 580, 658, 746, 745];
+ * @POSICAO-CURSOR = 705; 
+ * @DOBRAMENTO-CODIGO = [23, 344, 388, 421, 580, 658];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -11,7 +11,7 @@ programa
 
 	
 	funcao inicio(){
-		//logoLoja()
+		logoLoja()
 		entrarLoja()
 		//loja()
 	}
@@ -453,7 +453,7 @@ programa
 	funcao loja(){
 		inteiro numero
 		cadeia texto, categoria
-		logico continua = verdadeiro
+		logico i
 		
 		faca{
 		limpa()
@@ -462,11 +462,15 @@ programa
 		escreva("    1) Para Bolos\n    2) Para bebidas\n    3) Para doces\n    0) Para sair da loja\n ==================================\n")
 			escreva("\nDigite o número da categoria que deseja acessar: ")
 			leia(categoria)
-
 			se(t.cadeia_e_inteiro(categoria, 10))
 				categoriaInt = t.cadeia_para_inteiro(categoria, 10)
-				
-
+				se(categoriaInt!=1 e categoriaInt!=2 e categoriaInt!=3 e categoriaInt!=0){
+					escreva("O número digitado não corresponde a nenhuma categoria.\n")
+					i=falso
+			}
+			senao {
+			i=verdadeiro
+			}
 			escolha(categoriaInt){
 				caso 1:
 					categoria1()
@@ -481,13 +485,10 @@ programa
 					limpa()
 					escreva("\n\n\n")
 					fim()
-					continua = falso
 				pare
-				caso contrario:
-				escreva("O número digitado não corresponde a nenhuma categoria.\n")
 			}
 		u.aguarde(1750)
-		} enquanto (continua)
+		} enquanto (i==falso)
 	}
 
 	funcao categoria1() {																														
@@ -500,13 +501,12 @@ programa
 						g.desenhar_imagem(250, 0, foto)
 						g.desenhar_imagem(0,0, foto2)
 						g.desenhar_imagem(500,0, foto3)
-						g.renderizar()														
+						g.renderizar()															
 						escreva("\n\nEscolha o número correspondente para mais detalhes do produto:\n===================================\n1) Para Brownie\n2) Para Bolo de Cenoura\n3) Para Bolo Gelado\n0) Para retornar ao menu principal\n===================================\n")
 						escreva("Digite a categoria desejada: ")
 						leia(menuBolo)
 						se(menuBolo==0){
-						retorne
-						}
+						loja()}
 							escolha(menuBolo){
 								caso 1:
 								limpa()																			
@@ -572,8 +572,7 @@ programa
 							   }
 							   	 limpa()
 								 escreva("Número digitado inválido!\n\n=========================================\n\nPor favor,digite 0 para retornar: ")    
-								 leia(categoriaInt)
-						}
+								 leia(categoriaInt)}
 							      se(categoriaInt==0){
 							      loja()}
 									enquanto(categoriaInt!=0){
@@ -598,7 +597,7 @@ programa
 						escreva("Digite a categoria desejada: ")
 						leia(menuBebida)
 						se(menuBebida==0){
-						retorne}
+						loja()}
 							escolha(menuBebida){
 								caso 1:
 								limpa()
@@ -670,7 +669,7 @@ programa
 								limpa()
 								escreva("Número digitado inválido!\n\n=========================================\n\nPor favor,digite 0 para retornar: ")
 								leia(categoriaInt)}
-								categoria2()
+								loja()
 	}
 
 	funcao categoria3() {
@@ -688,7 +687,7 @@ programa
 						escreva("Digite a categoria desejada: ")
 						leia(menuDoce)
 						se(menuDoce==0){
-						retorne}
+						loja()}
 							escolha(menuDoce){
 								caso 1:
 								limpa()																		
@@ -755,7 +754,7 @@ programa
 							escreva("Número digitado inválido!\n\n=========================================\n\nPor favor,digite 0 para retornar: ")				 
 							leia(categoriaInt)}
 							se(categoriaInt==0){
-							loja()}
+							categoria3()}
 								enquanto(categoriaInt!=0){
 								limpa()
 								escreva("Número digitado inválido!\n\n=========================================\n\nPor favor,digite 0 para retornar: ")
@@ -771,8 +770,7 @@ programa
 		escreva("\n\n\n")
 		para(inteiro i=0; i<=55; i++){
 			escreva(l)
-		}
-		escreva("Muito obrigado pela visite, volte sempre!\n\n")
+		}escreva("Muito obrigado pela visite, volte sempre!\n\n")
 		para(inteiro i=0; i<=61; i++){
 			escreva(l)
 		}escreva(l,l,l,s,s,s,s,s,s,s,l,l,l,l,l,l,s,s,s,s,s,s,s,"\n")
@@ -805,7 +803,7 @@ programa
 		}escreva(l,l,l,l,l,l,l,l,l,l,s,s,s,s,s,s,"\n")
 		para(inteiro i=0; i<=61; i++){
 			escreva(l)
-		}escreva(l,l,l,l,l,l,l,l,l,l,l,l,s,s,"\n\n\n\n\n")	
+		}escreva(l,l,l,l,l,l,l,l,l,l,l,l,s,s,"\n\n\n\n\n")
 	}
 }
 
@@ -815,9 +813,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 23208; 
- * @DOBRAMENTO-CODIGO = [18, 383];
- * @PONTOS-DE-PARADA = 459;
+ * @POSICAO-CURSOR = 737; 
+ * @DOBRAMENTO-CODIGO = [18];
+ * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
